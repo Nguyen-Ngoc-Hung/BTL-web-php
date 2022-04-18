@@ -1,0 +1,94 @@
+.center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 300px;
+}
+/* style cho tin tức thu gọn */
+.news, .journalist{
+    width: 150vmin;
+    height: 30vmin;
+    margin: 10px 0px;
+    border: 1px solid black;
+    display: flex;
+}
+.news .photo, .journalist .avatar{
+    height: 30vmin;
+    width: 30vmin;
+    background-color: green;
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size: cover;
+    border-right: 1px solid black;
+}
+.news .content, .name{
+    width: 120vmin;
+    padding-left: 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.news .title{
+    height: 20vmin;
+    overflow-y: scroll;
+}
+.news .info{
+    height: 5vmin;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+}
+/* style chi tiết bài báo */
+.news-details{
+    width: 70vw;
+    font-family:Helvetica, sans-serif;
+}
+.news-details .photo img{
+    width: 100%;
+}
+.news-details .photo{
+    text-align: center;
+    font-style: italic;
+    font-weight: lighter;
+    margin: 100px 30px;
+}
+.news-details .title{
+    font-size: 30px;
+    margin: 0px 30px;
+}
+.news-details .summary{
+    font-style: bold;
+    font-size: 30px;
+    text-align: justify;
+    font-weight: bolder;
+    margin: 30px 30px;
+}
+.news-details .content{
+    font-size: 28px;
+    margin: 20px 30px;
+    text-align: justify;
+}
+.news-details .date{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 30px 30px;
+}
+.news-details .date .arthur{
+    font-size: medium;
+    font-weight: bolder;
+}
+.news-details .date .views{
+    font-style: italic;
+    font-weight: lighter;
+    color: gray;
+}
+
+/* Style cho nhà báo */
+.name>p{
+    font-weight: bolder;
+    font-size: larger;
+}
