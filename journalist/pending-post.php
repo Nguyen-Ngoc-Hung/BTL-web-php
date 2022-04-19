@@ -16,11 +16,11 @@ session_start();
     require "menu.php";
     ?> 
     <div class="center">
-        <h1>Các bài viết đã được xuất bản</h1>
+        <h1>Các bài viết đang chờ duyệt</h1>
         <?php 
         require "../connect-db.php";
 
-        $sql = "SELECT `id`, `title`, `summary`, `link_image`, `content`, `arthur`, `date`, `views` FROM `news` WHERE `arthur`='$id' and approved not in ('0')";
+        $sql = "SELECT `id`, `title`, `summary`, `link_image`, `content`, `arthur`, `date`, `views` FROM `news` WHERE `arthur`='$id' and approved=0";
         $result = $conn->query($sql);
         if($result->num_rows == 0)
         echo "Chưa có bài viết nào!";

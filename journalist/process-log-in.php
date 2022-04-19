@@ -14,11 +14,15 @@ if($result->num_rows != 1)
     header("location:index.php?noti=Sai tên đăng nhập hoặc mật khẩu");
     exit;
 }else{
-    session_start();
-    $_SESSION['id']=$row['id'];
-    $_SESSION['name']=$row['name'];
-    $_SESSION['avatar']=$row['avatar'];
-    if($row['confirmed'] == 0){
+    if($row['confirmed']==0){
+        echo "<h1>Tài khoản của bạn đang đợi xác minh</h1>";
+    }elseif($row['confirmed']==2){
+        echo "<h1>Bạn không đủ điểu kiện để trở thành nhà báo :((</h1>";
+    }elseif($row['confirmed']==1){
+        session_start();
+        $_SESSION['id']=$row['id'];
+        $_SESSION['name']=$row['name'];
+        $_SESSION['avatar']=$row['avatar'];
         header("location:home.php");
     }
 }

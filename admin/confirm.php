@@ -18,22 +18,16 @@
     <div class="center">
     <h1>Danh sách nhà báo hiện tại</h1>
     <?php 
-    $sql = "SELECT `id`, `name`, `avatar` FROM `jounalists` WHERE 1";
+    $sql = "SELECT `id`, `name`, `avatar` FROM `jounalists` WHERE confirmed=0";
     $result = $conn->query($sql);
     foreach($result as $row){
-        $tong_bai= ($conn->query("SELECT * FROM news where arthur =" . $row['id']))->num_rows;
-        $thang_nay = ($conn->query("SELECT * FROM `news` WHERE arthur=".$row['id']." and DATE(`date`) LIKE '". date("Y-m-")."%'"))->num_rows;
     ?> 
         <div class="journalist">
             <div class="avatar" style="background-image: url('../journalist/<?php echo $row['avatar']; ?> ')" >
 
             </div>
             <div class="name">
-                <p><?php echo$row['name']?></p>
-                <div class="data">
-                    <p>Tháng này: <?php echo $thang_nay?>  bài</p>
-                    <p>Tổng:  <?php echo $tong_bai?> bài</p>
-                </div>
+                <p><a href="check-information.php?id=<?php echo $row['id']?> "><?php echo$row['name']?></a></p>
             </div>
         </div>
         <?php 
