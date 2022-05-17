@@ -17,6 +17,7 @@ else{
     session_start();
     $_SESSION['id']=$id;
     $_SESSION['name'] = $name;
+    $_SESSION['role'] = $row['role'];
     $conn->close();
     header("location:home.php");
 }

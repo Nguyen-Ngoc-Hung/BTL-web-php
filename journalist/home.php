@@ -66,6 +66,5 @@ session_start();
             margin: 0px 10px;
         }
     </style>
-    
 </body>
 </html>

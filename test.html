@@ -9,23 +9,25 @@
 </head>
 <body>
     test
-    <style>
-        .anh{
-            width: 400px;
-            height: 400px;
-            text-align: center;
-            vertical-align: auto;
-            overflow-y: hidden;
-            overflow-x: hidden;
-            background-image: url("");
+    <img src="./photos/logo-BTL.jpg" alt="" style="background-image: url('./photos/1650038939.jpeg');">
+    <script>
+        var pw = document.getElementById("pw");
+        var rpw = document.getElementById("rpw");
+        var name = document.getElementById('name');
+        var email = document.getElementById("email");
+        if(name.value =="" || email.value =="" || pw ==""){
+            prompt("Phải điền đây dủ!!!");
+            return;
         }
-        img{
-            margin: auto;
+        if(pw==rpw){
+            document.getElementById("submit").click();
+        }else{
+            document.getElementById("pw").value = "";
+            document.getElementById("rpw").value = "";
+            prompt("Hai mật khẩu phải trùng nhau!!!")
         }
-    </style>
-    <div class="anh" style="">
-        <img src="photos/3C.png" alt="anh">
-    </div>
+        document.getElementById("butSearch").click();
+    </script>
     
 </body>
 </html>
