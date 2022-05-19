@@ -4,7 +4,7 @@ $avatar = $_SESSION['avatar'];
 $id = $_SESSION['id'];
 ?> 
 <div class="person">
-    <p><?php echo $name;?> </p>
+    <p><?php echo $name;?> <a href="change-pwd.php">Đổi mật khẩu</a></p>
     <div class="avatar"></div>
 </div>
 <ul>Menu

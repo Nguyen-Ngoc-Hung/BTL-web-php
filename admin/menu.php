@@ -1,6 +1,6 @@
 
 <div class="account">
-    <p>Xin chào <b><?php echo $_SESSION['name'];?> </b> </p>
+    <p>Xin chào <b><?php echo $_SESSION['name'];?> </b> </p> <a href="change-pwd.php">Đổi mật khẩu</a>
 </div>
 <ul>Menu
     <li><a href="home.php">Trang chủ</a></li>

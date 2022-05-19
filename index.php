@@ -29,7 +29,6 @@ $hot_img = ".".ltrim($row['link_image'],".");
     </div>
     <div class="bottom-main">
         <?php 
-
         $sql = "SELECT `id`, `title`, `summary`, `link_image`, `content`, `arthur`, `date`, `views` FROM `news` WHERE approved not in ('0')";
         $result = $conn->query($sql);
         $n = $result->num_rows;

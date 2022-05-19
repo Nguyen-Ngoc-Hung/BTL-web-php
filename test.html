@@ -5,29 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../style/style.css">
 </head>
 <body>
-    test
-    <img src="./photos/logo-BTL.jpg" alt="" style="background-image: url('./photos/1650038939.jpeg');">
     <script>
-        var pw = document.getElementById("pw");
-        var rpw = document.getElementById("rpw");
-        var name = document.getElementById('name');
-        var email = document.getElementById("email");
-        if(name.value =="" || email.value =="" || pw ==""){
-            prompt("Phải điền đây dủ!!!");
-            return;
+        function check(){
+            if(document.getElementById("new-password").value==document.getElementById("cf-password").value){
+                document.getElementById("submit").click();
+            }
+            else{
+                alert("Hai mật khẩu mới phải trùng nhau!");
+            }
         }
-        if(pw==rpw){
-            document.getElementById("submit").click();
-        }else{
-            document.getElementById("pw").value = "";
-            document.getElementById("rpw").value = "";
-            prompt("Hai mật khẩu phải trùng nhau!!!")
-        }
-        document.getElementById("butSearch").click();
     </script>
-    
 </body>
 </html>

@@ -16,8 +16,8 @@
     <div class="nav">
         <div class="list">
             <a href="index.php">Trang chủ</a>
-            <a href="#">Giới thiệu</a>
-            <a href="#">Liên hệ</a>
+            <a href="#footer">Giới thiệu</a>
+            <a href="#footer">Liên hệ</a>
         </div>
         <div class="search">
             <form action="search.php" method="get">

@@ -19,6 +19,8 @@
         ?> 
         <button>Đăng nhập</button>
         <a href="registration-form.php">Đăng ký</a>
+        <br>
+        <a href="">Quên mật khẩu</a>
     </form>
 </body>
 </html>

@@ -73,7 +73,6 @@
 }
 .news-details .content{
     font-size: 28px;
-    margin: 20px 30px;
     text-align: justify;
 }
 .news-details .date{
@@ -157,7 +156,7 @@ a{
 }
 .content{
     display: inline-block;
-    width: 70%;
+    width: 100%;
 }
 .catogory{
     display: inline-block;
@@ -341,9 +340,12 @@ a{
     list-style:circle;
     margin-left: 50px;
 }
-.khachhang .content {
-    margin: 0;
+.news-details .content {
+    margin: 0px;
     width: 100%;
+    box-sizing: border-box;
+    padding: 0px 8%;
+    
 }
 .khachhang{
     margin: auto;
@@ -379,4 +381,7 @@ a{
     border-radius: 5px;
     top: 90vh;
     right: 5px;
+}
+.can-giua{
+    margin: auto;
 }
