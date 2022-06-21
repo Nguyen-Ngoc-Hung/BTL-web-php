@@ -20,7 +20,7 @@ if($result->num_rows != 1)
         echo "<h1>Bạn không đủ điểu kiện để trở thành nhà báo :((</h1>";
     }elseif($row['confirmed']==1){
         session_start();
-        $_SESSION['id']=$row['id'];
+        $_SESSION['idj']=$row['id'];
         $_SESSION['name']=$row['name'];
         $_SESSION['avatar']=$row['avatar'];
         header("location:home.php");

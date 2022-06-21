@@ -1,6 +1,6 @@
 <?php 
 session_start();
-$id = $_SESSION['id'];
+$id = $_SESSION['idj'];
 $password = $_POST['password'];
 $new_password = $_POST['new-password'];
 require "../connect-db.php";

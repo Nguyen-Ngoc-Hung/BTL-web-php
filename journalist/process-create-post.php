@@ -6,7 +6,7 @@ $summary = $_POST['summary'];
 $content = $_POST['content'];
 $fileImage = $_FILES['fileImage'];
 $date = date("Y-m-d");
-$arthur = $_SESSION['id'];
+$arthur = $_SESSION['idj'];
 
 //Lưu ảnh
 $target_dir = "../photos/";

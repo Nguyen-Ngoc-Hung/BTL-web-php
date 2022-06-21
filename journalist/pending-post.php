@@ -1,5 +1,9 @@
 <?php 
 session_start();
+if(!isset($_SESSION['idj'])){
+    header("location: ./index.php");
+    exit();
+}
 ?> 
 <!DOCTYPE html>
 <html lang="en">
@@ -9,6 +13,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trang đăng bài</title>
     <link rel="stylesheet" href="../style/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
 <body>
     <b>Giao diện trang chủ cho nhà báo</b>
@@ -66,6 +71,6 @@ session_start();
             margin: 0px 10px;
         }
     </style>
-    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>

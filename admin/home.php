@@ -9,9 +9,14 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../style/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
 <body>
     <?php 
+    if(!isset($_SESSION['id'])){
+        header("location: ./index.php");
+        exit();
+    }
     $id = $_SESSION['id'];
 
     require "../connect-db.php";
@@ -48,7 +53,7 @@ session_start();
                         <?php echo $row['summary'] ?> 
                     </p>
                 </div>
-                <div class="info"><p>Số lượt xem: <?php echo $row['views']?> Ngày đăng: <?php echo $row['date']?> </p><button><a href="process-delete-news.php?id=<?php echo $row['id']?> ">Gỡ bài</a></button></div>
+                <div class="info"><p>Số lượt xem: <?php echo $row['views']?> Ngày đăng: <?php echo $row['date']?> </p><button class="btn btn-warning"><a href="process-delete-news.php?id=<?php echo $row['id']?> ">Gỡ bài</a></button></div>
             </div>
         </div>
 
@@ -57,5 +62,6 @@ session_start();
         }
         ?>
     </div> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>

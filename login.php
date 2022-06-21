@@ -1,8 +1,5 @@
-<table>
-    <tr>
-        <th>Tên đăng nhập</th>
-        <td><input type="email" name="email"></td>
-    </tr>
-        <th>Mật khẩu</th>
-        <td><input type="password" name="password"></td>
-</table>
+
+<p>Tên đăng nhập</p>
+<input type="email" name="email" class="form-control">
+<p>Mật khẩu</p>
+<input type="password" name="password" class="form-control">
